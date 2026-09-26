@@ -1,8 +1,9 @@
-const CACHE = "cdr-solutec-acf-pwa-v5";
+const CACHE = "cdr-solutec-acf-pwa-v6";
 const BASE = new URL("./", self.registration.scope);
 const CORE = [
   "./", "./index.html", "./manifest.webmanifest", "./ios-install.css", "./ios-install.js", "./print-one-page.css",
-  "./index-DRpVqdhS.js", "./index-DkbCDmpZ.css"
+  "./index-DRpVqdhS.js", "./index-DkbCDmpZ.css",
+  "./html2canvas.min.js", "./jspdf.umd.min.js", "./pdf-export.js"
 ].map(path => new URL(path, BASE).href);
 const OPTIONAL = [
   "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./apple-touch-icon.png",
