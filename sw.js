@@ -1,4 +1,4 @@
-const CACHE = "cdr-solutec-acf-pwa-v6";
+const CACHE = "cdr-solutec-acf-pwa-v7";
 const BASE = new URL("./", self.registration.scope);
 const CORE = [
   "./", "./index.html", "./manifest.webmanifest", "./ios-install.css", "./ios-install.js", "./print-one-page.css",
