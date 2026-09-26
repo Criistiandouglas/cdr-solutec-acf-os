@@ -2,7 +2,7 @@ const CACHE = "cdr-solutec-acf-pwa-v1";
 const BASE = new URL("./", self.registration.scope);
 const FILES = [
   "./", "./index.html", "./manifest.webmanifest", "./ios-install.css", "./ios-install.js",
-  "./assets/index-DRpVqdhS.js", "./assets/index-DkbCDmpZ.css",
+  "./index-DRpVqdhS.js", "./index-DkbCDmpZ.css",
   "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./apple-touch-icon.png",
   "./logo-cdr-tec.png", "./logo-solutec.png", "./logo-xandinho.png", "./logo_cdr.png",
   "./letterhead-cdr-tec.png", "./letterhead-solutec.png", "./letterhead-xandinho.png"
