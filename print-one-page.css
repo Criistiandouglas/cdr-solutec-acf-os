@@ -1,10 +1,15 @@
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
   html,
   body {
     width: 210mm !important;
-    height: 296mm !important;
+    height: 297mm !important;
     min-height: 0 !important;
-    max-height: 296mm !important;
+    max-height: 297mm !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
@@ -12,9 +17,9 @@
 
   body > #root {
     width: 210mm !important;
-    height: 296mm !important;
+    height: 297mm !important;
     min-height: 0 !important;
-    max-height: 296mm !important;
+    max-height: 297mm !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
@@ -24,9 +29,9 @@
   .print-brand > .print-sheet,
   .print-brand .letterhead-bg {
     width: 210mm !important;
-    height: 296mm !important;
-    min-height: 296mm !important;
-    max-height: 296mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
     margin: 0 !important;
     overflow: hidden !important;
     break-before: avoid-page !important;
@@ -38,6 +43,8 @@
   }
 
   .print-brand {
+    position: fixed !important;
+    inset: 0 !important;
     contain: layout paint !important;
   }
 }

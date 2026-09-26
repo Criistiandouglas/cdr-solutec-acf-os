@@ -14,6 +14,30 @@
     <link rel="icon" sizes="192x192" href="./icon-192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <title>CDR + Solutec + ACF — OS Offline</title>
+    <script>
+      window.recoverOSApp = async function () {
+        try {
+          if ("serviceWorker" in navigator) {
+            const registrations = await navigator.serviceWorker.getRegistrations();
+            await Promise.all(registrations.map(registration => registration.unregister()));
+          }
+          if ("caches" in window) {
+            const names = await caches.keys();
+            await Promise.all(names.map(name => caches.delete(name)));
+          }
+        } finally {
+          location.replace("./?atualizacao=" + Date.now());
+        }
+      };
+      window.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          const root = document.getElementById("root");
+          if (root && root.childElementCount === 0) {
+            root.innerHTML = '<main style="min-height:100vh;display:grid;place-items:center;padding:24px;background:#f2f5f8;font-family:Arial,sans-serif"><section style="max-width:420px;background:#fff;border-radius:18px;padding:28px;box-shadow:0 12px 35px #17334d24;text-align:center"><h1 style="color:#075ba8">Atualização necessária</h1><p>O iPhone abriu uma versão antiga do aplicativo. Toque abaixo para restaurar sem apagar suas ordens de serviço.</p><button onclick="recoverOSApp()" style="border:0;border-radius:10px;padding:14px 20px;background:#075ba8;color:white;font-weight:700">Atualizar aplicativo</button></section></main>';
+          }
+        }, 4000);
+      });
+    </script>
     <script type="module" crossorigin src="./index-DRpVqdhS.js"></script>
     <link rel="stylesheet" crossorigin href="./index-DkbCDmpZ.css" />
     <link rel="stylesheet" href="./ios-install.css" />
